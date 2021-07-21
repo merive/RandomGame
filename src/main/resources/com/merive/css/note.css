@@ -1,7 +1,16 @@
 .text-area .content {
-    -fx-background-color: #BBE1FA;
+    -fx-background-color: #1a2a33;
 }
 
 .text-area {
-    -fx-background-color: #BBE1FA;
+    -fx-background-color: #1a2a33;
+    -fx-border-color: #bbe1fa;
+    -fx-border-width: 4px;
+    -fx-text-fill: #bbe1fa;
+    -fx-font-size: 18px;
+    -fx-font-family: "Roboto Light";
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, #bbe1fa, 7, 0.25, 0.0, 0.0);
 }

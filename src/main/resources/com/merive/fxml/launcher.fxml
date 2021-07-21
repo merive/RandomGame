@@ -7,15 +7,17 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.LauncherController">
     <Pane prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-      <Pane layoutX="207.0" layoutY="81.0" prefHeight="318.0" prefWidth="598.0" style="-fx-background-color: linear-gradient(to left, #1A2A33, #0F4B72); -fx-border-color: #bbe1fa; -fx-border-width: 4px;" />
-        <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="419.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="62.0" prefWidth="598.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Start" textAlignment="CENTER" textFill="#bbe1fa">
+      <Pane layoutX="214.0" layoutY="80.0" prefHeight="318.0" prefWidth="585.0" style="-fx-background-color: linear-gradient(to left, #1A2A33, #0F4B72); -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+         <children>
+              <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="193.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../icons/launcher_icon.png" />
+              </ImageView>
+         </children></Pane>
+        <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="420.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="62.0" prefWidth="585.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Start" textAlignment="CENTER" textFill="#bbe1fa">
             <font>
                 <Font name="Roboto Light" size="24.0" />
             </font>
         </Button>
-        <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../icons/launcher_icon.png" />
-        </ImageView>
         <ImageView fx:id="noteImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../icons/note_icon.png" />
         </ImageView>
@@ -31,7 +33,7 @@
         <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../icons/rrc_icon.png" />
         </ImageView>
-        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="14.0" prefHeight="62.0" prefWidth="598.0" text="Welcome to MTools" textFill="#bbe1fa">
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="62.0" prefWidth="585.0" text="Welcome to MTools" textFill="#bbe1fa">
             <font>
                 <Font name="Roboto Light" size="32.0" />
             </font>
@@ -63,7 +65,7 @@
                 <Font name="Roboto Light" size="24.0" />
             </font>
         </Button>
-        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="419.0" mnemonicParsing="false" onAction="#exit" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Exit" textFill="#bbe1fa">
+        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="420.0" mnemonicParsing="false" onAction="#exit" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Exit" textFill="#bbe1fa">
             <font>
                 <Font name="Roboto Light" size="24.0" />
             </font>

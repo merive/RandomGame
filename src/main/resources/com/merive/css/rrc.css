@@ -1,36 +1,40 @@
 .text-area .content {
-    -fx-background-color: #BBE1FA;
+    -fx-background-color: #1B262C;
 }
 
 .text-area {
-    -fx-background-color: #BBE1FA;
+    -fx-background-color: #1B262C;
+    -fx-text-fill: #bbe1fa;
 }
 
 .spinner .content {
     -fx-body-color: #1B262C;
+    -fx-text-fill: #bbe1fa;
 }
 
 .spinner .text-field {
     -fx-background-color: #1B262C;
-
+    -fx-text-fill: #bbe1fa;
 }
 
 .spinner .increment-arrow-button,
 .spinner .decrement-arrow-button {
     -fx-body-color: #BBE1FA;
     -fx-background-color: #1B262C;
+    -fx-border-color: #BBE1FA;
+    -fx-border-width: 1px;
 }
 
-.spinner .increment-arrow-button:hover,
-.spinner .decrement-arrow-button:hover {
-    -fx-body-color: #BBE1FA;
-    -fx-background-color: #1B262C;
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #BBE1FA;
 }
 
-.spinner .increment-arrow-button:hover:pressed,
-.spinner .decrement-arrow-button:hover:pressed,
-.spinner .increment-arrow-button:pressed,
-.spinner .decrement-arrow-button:pressed {
-    -fx-body-color: #BBE1FA;
-    -fx-background-color: #1B262C;
+.spinner .increment-arrow-button .increment-arrow:hover,
+.spinner .decrement-arrow-button .decrement-arrow:hover {
+    -fx-background-color: #BBE1FA;
+}
+
+.button:hover, .spinner:hover {
+    -fx-effect: dropshadow(gaussian, #bbe1fa, 7, 0.25, 0.0, 0.0);
 }

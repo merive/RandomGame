@@ -4,34 +4,50 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.RRCController">
-   <Pane layoutY="1.0" prefHeight="350.0" prefWidth="600.0">
-      <Pane layoutY="-4.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #1B262C;">
-         <TextArea fx:id="message" layoutX="18.0" layoutY="20.0" prefHeight="268.0" prefWidth="564.0" promptText="Write text" style="-fx-border-color: #3282b8;" stylesheets="@../css/rrc.css" wrapText="true" />
-         <TextField fx:id="result" editable="false" layoutX="18.0" layoutY="303.0" prefHeight="27.0" prefWidth="564.0" promptText="..." style="-fx-border-color: #3282b8; -fx-background-color: #BBE1FA;">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.RRCController">
+    <Pane layoutY="1.0" prefHeight="350.0" prefWidth="600.0">
+        <Pane layoutY="-4.0" prefHeight="406.0" prefWidth="600.0"
+              style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+            <TextArea fx:id="message" layoutX="18.0" layoutY="14.0" prefHeight="268.0" prefWidth="564.0"
+                      promptText="Write text"
+                      style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                      stylesheets="@../css/rrc.css" wrapText="true">
+                <font>
+                    <Font name="Roboto Light" size="16.0"/>
+                </font>
+            </TextArea>
+            <TextField fx:id="result" editable="false" layoutX="18.0" layoutY="294.0" prefHeight="27.0"
+                       prefWidth="564.0" promptText="..."
+                       style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px; -fx-text-fill: #bbe1fa;">
+                <font>
+                    <Font name="Roboto Light" size="16.0"/>
+                </font>
+            </TextField>
+        </Pane>
+    </Pane>
+    <Pane layoutY="346.0" prefHeight="60.0" prefWidth="600.0"
+          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+        <Label alignment="CENTER" layoutX="14.0" layoutY="1.0" prefHeight="60.0" prefWidth="120.0" text="RRC"
+               textFill="#bbe1fa">
             <font>
-               <Font size="15.0" />
+                <Font name="Roboto Light" size="24.0"/>
             </font>
-         </TextField>
-      </Pane>
-   </Pane>
-   <Pane layoutY="346.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #BBE1FA;">
-      <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="66.0" prefWidth="85.0" text="RRC" textFill="#1b262c">
-         <font>
-            <Font name="Roboto" size="24.0" />
-         </font>
-      </Label>
-      <Spinner fx:id="key" layoutX="180.0" layoutY="18.0" prefHeight="25.0" prefWidth="120.0" style="-fx-border-color: #3282b8; color: #1b262c;" stylesheets="@../css/rrc.css">
-         <valueFactory>
-            <SpinnerValueFactory.IntegerSpinnerValueFactory max="2147483646" min="0" />
-         </valueFactory>
-      </Spinner>
-      <Label layoutX="142.0" layoutY="17.0" text="Key" textFill="#1b262c">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Button layoutX="329.0" layoutY="18.0" mnemonicParsing="false" onAction="#decrypt" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #3282b8; -fx-background-color: #1B262C;" text="Decrypt" textFill="#bbe1fa" />
-      <Button layoutX="466.0" layoutY="18.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #3282b8; -fx-background-color: #1B262C;" text="Encrypt" textFill="#bbe1fa" />
-   </Pane>
+        </Label>
+        <Spinner fx:id="key" layoutX="167.0" layoutY="15.0" prefHeight="25.0" prefWidth="120.0" promptText="Key"
+                 style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px; -fx-text-fill: #bbe1fa;"
+                 stylesheets="@../css/rrc.css">
+            <valueFactory>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory max="2147483646" min="0"/>
+            </valueFactory>
+        </Spinner>
+        <Button layoutX="307.0" layoutY="15.0" mnemonicParsing="false" onAction="#decrypt" prefHeight="27.0"
+                prefWidth="120.0"
+                style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" text="Decrypt"
+                stylesheets="@../css/launcher.css" textFill="#bbe1fa"/>
+        <Button layoutX="447.0" layoutY="15.0" mnemonicParsing="false" onAction="#encrypt" prefHeight="27.0"
+                prefWidth="120.0"
+                style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" text="Encrypt"
+                stylesheets="@../css/launcher.css" textFill="#bbe1fa"/>
+    </Pane>
 </AnchorPane>

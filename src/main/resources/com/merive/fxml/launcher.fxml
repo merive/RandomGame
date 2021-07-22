@@ -27,7 +27,7 @@
         <ImageView fx:id="emailImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../icons/email_icon.png" />
         </ImageView>
-        <ImageView fx:id="watchImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
+        <ImageView fx:id="timeImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../icons/time_icon.png" />
         </ImageView>
         <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -55,7 +55,7 @@
                 <Font name="Roboto Light" size="24.0" />
             </font>
         </Button>
-        <Button fx:id="watchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickWatch" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Watch" textFill="#bbe1fa">
+        <Button fx:id="timeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickTime" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Time" textFill="#bbe1fa">
             <font>
                 <Font name="Roboto Light" size="24.0" />
             </font>

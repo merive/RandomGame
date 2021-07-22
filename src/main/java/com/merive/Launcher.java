@@ -26,6 +26,5 @@ public class Launcher extends Application {
         stage.setResizable(false);
         stage.show();
     }
-
 }
 

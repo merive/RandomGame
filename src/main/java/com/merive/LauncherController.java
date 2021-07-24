@@ -125,19 +125,18 @@ public class LauncherController implements Initializable {
     }
 
     public void exit() {
-        System.exit(0);
+        Platform.exit();
     }
 
-    public void hide() {
-        Stage obj = (Stage) titlebar.getScene().getWindow();
-        obj.setIconified(true);
+    public void minimize() {
+        ((Stage) titlebar.getScene().getWindow()).setIconified(true);
     }
 
     @FXML
     public void move(MouseEvent me) {
         Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
-        stage.setX(me.getScreenX()-x);
-        stage.setY(me.getScreenY()-y);
+        stage.setX(me.getScreenX() - x);
+        stage.setY(me.getScreenY() - y);
     }
 
     @FXML

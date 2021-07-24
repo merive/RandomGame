@@ -1,8 +1,13 @@
 package com.merive;
 
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.*;
 
@@ -10,9 +15,10 @@ public class NoteController {
 
 
     public TextArea text;
-    public Pane pane;
+    public Pane pane, titlebar;
 
     String path = "";
+    double x, y;
 
     public void open() {
         text.setText("");
@@ -57,6 +63,27 @@ public class NoteController {
         bw.write(text.getText());
         bw.flush();
         bw.close();
+    }
+
+    public void minimize() {
+        ((Stage) titlebar.getScene().getWindow()).setIconified(true);
+    }
+
+    @FXML
+    public void move(MouseEvent me) {
+        Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
+        stage.setX(me.getScreenX() - x);
+        stage.setY(me.getScreenY() - y);
+    }
+
+    @FXML
+    public void press(MouseEvent me) {
+        x = me.getSceneX();
+        y = me.getSceneY();
+    }
+
+    public void exit() {
+        ((Stage) titlebar.getScene().getWindow()).close();
     }
 
     public void close() {

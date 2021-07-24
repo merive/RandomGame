@@ -5,83 +5,121 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.LauncherController">
-    <Pane layoutY="50.0" prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-        <Pane layoutX="214.0" layoutY="80.0" prefHeight="318.0" prefWidth="585.0" style="-fx-background-color: linear-gradient(to left, #1A2A33, #0F4B72); -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-            <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="193.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../icons/launcher_icon.png" />
+<AnchorPane prefHeight="550.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.LauncherController">
+    <Pane layoutY="50.0" prefHeight="500.0" prefWidth="820.0"
+          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+        <Pane layoutX="214.0" layoutY="80.0" prefHeight="318.0" prefWidth="585.0"
+              style="-fx-background-color: linear-gradient(to left, #1A2A33, #0F4B72); -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+            <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="193.0" layoutY="59.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <Image url="@../icons/launcher_icon.png"/>
             </ImageView>
         </Pane>
-        <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="414.0" mnemonicParsing="false" onAction="#clickStartButton" prefHeight="62.0" prefWidth="585.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Start" textAlignment="CENTER" textFill="#bbe1fa">
+        <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="414.0"
+                mnemonicParsing="false" onAction="#clickStartButton" prefHeight="62.0" prefWidth="585.0"
+                style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                stylesheets="@../css/launcher.css" text="Start" textAlignment="CENTER" textFill="#bbe1fa">
             <font>
-                <Font name="Roboto Light" size="24.0" />
+                <Font name="Roboto Light" size="24.0"/>
             </font>
         </Button>
-        <ImageView fx:id="noteImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/note_icon.png" />
+        <ImageView fx:id="noteImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/note_icon.png"/>
         </ImageView>
-        <ImageView fx:id="calculatorImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/calculator_icon.png" />
+        <ImageView fx:id="calculatorImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/calculator_icon.png"/>
         </ImageView>
-        <ImageView fx:id="emailImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/email_icon.png" />
+        <ImageView fx:id="emailImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/email_icon.png"/>
         </ImageView>
-        <ImageView fx:id="timeImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/time_icon.png" />
+        <ImageView fx:id="timeImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/time_icon.png"/>
         </ImageView>
-        <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/rrc_icon.png" />
+        <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0"
+                   pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/rrc_icon.png"/>
         </ImageView>
-        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="62.0" prefWidth="585.0" text="Welcome to MTools" textAlignment="CENTER" textFill="#bbe1fa">
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="62.0"
+               prefWidth="585.0" text="Welcome to MTools" textAlignment="CENTER" textFill="#bbe1fa">
             <font>
-                <Font name="Roboto Light" size="32.0" />
+                <Font name="Roboto Light" size="32.0"/>
             </font>
         </Label>
-        <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-            <Button fx:id="noteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="24.0" mnemonicParsing="false" onAction="#clickNote" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Note" textAlignment="CENTER" textFill="#bbe1fa">
+        <Pane prefHeight="500.0" prefWidth="200.0"
+              style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+            <Button fx:id="noteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="24.0"
+                    mnemonicParsing="false" onAction="#clickNote" prefHeight="62.0" prefWidth="174.0"
+                    style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                    stylesheets="@../css/launcher.css" text="Note" textAlignment="CENTER" textFill="#bbe1fa">
                 <font>
-                    <Font name="Roboto Light" size="24.0" />
+                    <Font name="Roboto Light" size="24.0"/>
                 </font>
             </Button>
-            <Button fx:id="calculatorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="122.0" mnemonicParsing="false" onAction="#clickCalculator" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Calculator" textFill="#bbe1fa">
+            <Button fx:id="calculatorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="122.0"
+                    mnemonicParsing="false" onAction="#clickCalculator" prefHeight="62.0" prefWidth="174.0"
+                    style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                    stylesheets="@../css/launcher.css" text="Calculator" textFill="#bbe1fa">
                 <font>
-                    <Font name="Roboto Light" size="24.0" />
+                    <Font name="Roboto Light" size="24.0"/>
                 </font>
             </Button>
-            <Button fx:id="emailButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="219.0" mnemonicParsing="false" onAction="#clickEmail" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Email" textFill="#bbe1fa">
+            <Button fx:id="emailButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="219.0"
+                    mnemonicParsing="false" onAction="#clickEmail" prefHeight="62.0" prefWidth="174.0"
+                    style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                    stylesheets="@../css/launcher.css" text="Email" textFill="#bbe1fa">
                 <font>
-                    <Font name="Roboto Light" size="24.0" />
+                    <Font name="Roboto Light" size="24.0"/>
                 </font>
             </Button>
-            <Button fx:id="timeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="316.0" mnemonicParsing="false" onAction="#clickTime" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="Time" textFill="#bbe1fa">
+            <Button fx:id="timeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="316.0"
+                    mnemonicParsing="false" onAction="#clickTime" prefHeight="62.0" prefWidth="174.0"
+                    style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                    stylesheets="@../css/launcher.css" text="Time" textFill="#bbe1fa">
                 <font>
-                    <Font name="Roboto Light" size="24.0" />
+                    <Font name="Roboto Light" size="24.0"/>
                 </font>
             </Button>
-            <Button fx:id="RRCButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="414.0" mnemonicParsing="false" onAction="#clickRRC" prefHeight="62.0" prefWidth="174.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="RRC" textFill="#bbe1fa">
+            <Button fx:id="RRCButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="414.0"
+                    mnemonicParsing="false" onAction="#clickRRC" prefHeight="62.0" prefWidth="174.0"
+                    style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                    stylesheets="@../css/launcher.css" text="RRC" textFill="#bbe1fa">
                 <font>
-                    <Font name="Roboto Light" size="24.0" />
+                    <Font name="Roboto Light" size="24.0"/>
                 </font>
             </Button>
         </Pane>
     </Pane>
-    <Pane fx:id="titlebar" onMouseDragged="#move" onMousePressed="#press" prefHeight="55.0" prefWidth="820.0" style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="769.0" layoutY="10.0" mnemonicParsing="false" onAction="#exit" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="X" textFill="#bbe1fa">
+    <Pane fx:id="titlebar" onMouseDragged="#move" onMousePressed="#press" prefHeight="55.0" prefWidth="820.0"
+          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="769.0" layoutY="10.0"
+                mnemonicParsing="false" onAction="#exit" prefHeight="37.0" prefWidth="37.0"
+                style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                stylesheets="@../css/launcher.css" text="X" textFill="#bbe1fa">
             <font>
-                <Font name="Roboto Light" size="12.0" />
+                <Font name="Roboto Light" size="12.0"/>
             </font>
         </Button>
-        <Button fx:id="hideButton" alignment="CENTER" contentDisplay="CENTER" layoutX="719.0" layoutY="10.0" mnemonicParsing="false" onAction="#hide" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="_" textFill="#bbe1fa">
+        <Button fx:id="hideButton" alignment="CENTER" contentDisplay="CENTER" layoutX="719.0" layoutY="10.0"
+                mnemonicParsing="false" onAction="#minimize" prefHeight="37.0" prefWidth="37.0"
+                style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
+                stylesheets="@../css/launcher.css" text="_" textFill="#bbe1fa">
             <font>
-                <Font name="Roboto Light" size="12.0" />
+                <Font name="Roboto Light" size="12.0"/>
             </font>
         </Button>
-        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="394.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../icons/launcher_icon.png" />
+        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="394.0" layoutY="11.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../icons/launcher_icon.png"/>
         </ImageView>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="-3.0" prefHeight="62.0" prefWidth="174.0" text="MTools Launcher" textFill="#bbe1fa">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="-3.0" prefHeight="62.0"
+               prefWidth="174.0" text="MTools Launcher" textFill="#bbe1fa">
             <font>
-                <Font name="Roboto Light" size="20.0" />
+                <Font name="Roboto Light" size="20.0"/>
             </font>
         </Label>
     </Pane>

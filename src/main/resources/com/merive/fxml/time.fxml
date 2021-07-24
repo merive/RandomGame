@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="125.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.TimeController">
-    <Pane prefHeight="125.0" prefWidth="600.0"
-          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
-        <Label fx:id="time" alignment="CENTER" layoutY="48.0" prefHeight="21.0" prefWidth="600.0" textFill="#BBE1FA">
+<AnchorPane prefHeight="175.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.TimeController">
+    <Pane layoutY="49.0" prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+        <Label fx:id="time" alignment="CENTER" layoutY="43.0" prefHeight="21.0" prefWidth="600.0" textFill="#BBE1FA">
             <font>
-                <Font name="Roboto Light" size="28.0"/>
+                <Font name="Roboto Light" size="28.0" />
+            </font>
+        </Label>
+    </Pane>
+    <Pane fx:id="titlebar" onMouseDragged="#move" onMousePressed="#press" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="549.0" layoutY="9.0" mnemonicParsing="false" onAction="#exit" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="X" textFill="#bbe1fa">
+            <font>
+                <Font name="Roboto Light" size="12.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="499.0" layoutY="9.0" mnemonicParsing="false" onAction="#minimize" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;" stylesheets="@../css/launcher.css" text="_" textFill="#bbe1fa">
+            <font>
+                <Font name="Roboto Light" size="12.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="284.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/time_icon.png" />
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="-3.0" prefHeight="62.0" prefWidth="74.0" text="Time" textFill="#bbe1fa">
+            <font>
+                <Font name="Roboto Light" size="20.0" />
             </font>
         </Label>
     </Pane>

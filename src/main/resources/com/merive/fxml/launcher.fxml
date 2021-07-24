@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="550.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.LauncherController">
     <Pane layoutY="50.0" prefHeight="500.0" prefWidth="820.0"
-          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+          style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
         <Pane layoutX="214.0" layoutY="80.0" prefHeight="318.0" prefWidth="585.0"
               style="-fx-background-color: linear-gradient(to left, #1A2A33, #0F4B72); -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
             <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="193.0" layoutY="59.0"
@@ -51,7 +51,7 @@
             </font>
         </Label>
         <Pane prefHeight="500.0" prefWidth="200.0"
-              style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+              style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
             <Button fx:id="noteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="24.0"
                     mnemonicParsing="false" onAction="#clickNote" prefHeight="62.0" prefWidth="174.0"
                     style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"
@@ -95,7 +95,7 @@
         </Pane>
     </Pane>
     <Pane fx:id="titlebar" onMouseDragged="#move" onMousePressed="#press" prefHeight="55.0" prefWidth="820.0"
-          style="-fx-background-color: #1B262C; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
+          style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;">
         <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="769.0" layoutY="10.0"
                 mnemonicParsing="false" onAction="#exit" prefHeight="37.0" prefWidth="37.0"
                 style="-fx-background-color: #1a2a33; -fx-border-color: #bbe1fa; -fx-border-width: 4px;"

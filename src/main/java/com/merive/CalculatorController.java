@@ -1,14 +1,19 @@
 package com.merive;
 
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 
 public class CalculatorController {
 
+    public Pane titlebar;
     public TextField textField;
-
     public String OPERATOR = "";
+    double x, y;
     int num1;
     int num2;
 
@@ -172,5 +177,26 @@ public class CalculatorController {
                     break;
                 }
         }
+    }
+
+    public void minimize() {
+        ((Stage) titlebar.getScene().getWindow()).setIconified(true);
+    }
+
+    @FXML
+    public void move(MouseEvent me) {
+        Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
+        stage.setX(me.getScreenX() - x);
+        stage.setY(me.getScreenY() - y);
+    }
+
+    @FXML
+    public void press(MouseEvent me) {
+        x = me.getSceneX();
+        y = me.getSceneY();
+    }
+
+    public void exit() {
+        ((Stage) titlebar.getScene().getWindow()).close();
     }
 }

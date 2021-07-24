@@ -1,8 +1,13 @@
 package com.merive;
 
+import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import javax.mail.MessagingException;
 
@@ -10,6 +15,9 @@ public class EmailController {
     public TextField login, password, title, to;
     public TextArea message;
     public Alert alert;
+    public Pane titlebar;
+
+    double x, y;
 
     public void send() {
         try {
@@ -37,5 +45,26 @@ public class EmailController {
         alert.setHeaderText(null);
         alert.setContentText(res);
         alert.showAndWait();
+    }
+
+    public void minimize() {
+        ((Stage) titlebar.getScene().getWindow()).setIconified(true);
+    }
+
+    @FXML
+    public void move(MouseEvent me) {
+        Stage stage = (Stage) ((Node) me.getSource()).getScene().getWindow();
+        stage.setX(me.getScreenX() - x);
+        stage.setY(me.getScreenY() - y);
+    }
+
+    @FXML
+    public void press(MouseEvent me) {
+        x = me.getSceneX();
+        y = me.getSceneY();
+    }
+
+    public void exit() {
+        ((Stage) titlebar.getScene().getWindow()).close();
     }
 }
